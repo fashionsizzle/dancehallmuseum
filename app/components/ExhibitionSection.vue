@@ -1,12 +1,17 @@
 <script setup lang="ts">
 import type { Exhibition } from "~/data/exhibitions";
 import { toRoman } from "~/lib/content-utils";
+import { journalPosts } from "~/data/journal";
 
 defineProps<{
   exhibition: Exhibition;
   index: number;
   total: number;
 }>();
+
+function articleFor(highlight: string) {
+  return journalPosts.find((p) => p.title.toLowerCase() === highlight.toLowerCase());
+}
 </script>
 
 <template>
@@ -24,12 +29,17 @@ defineProps<{
           <p class="mt-8 max-w-md text-base leading-relaxed text-ink-soft">{{ exhibition.dek }}</p>
 
           <ul class="mt-10 flex max-w-md flex-wrap gap-2">
-            <li
-              v-for="h in exhibition.highlights"
-              :key="h"
-              class="label rounded-full border border-line px-3 py-1.5 text-ink-soft"
-            >
-              {{ h }}
+            <li v-for="h in exhibition.highlights" :key="h">
+              <NuxtLink
+                v-if="articleFor(h)"
+                :to="`/journal/${articleFor(h)!.slug}`"
+                class="label rounded-full border border-line px-3 py-1.5 text-ink-soft transition-colors hover:border-ink hover:text-ink"
+              >
+                {{ h }}
+              </NuxtLink>
+              <span v-else class="label rounded-full border border-line px-3 py-1.5 text-ink-soft">
+                {{ h }}
+              </span>
             </li>
           </ul>
         </Reveal>
