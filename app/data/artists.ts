@@ -211,29 +211,6 @@ export const artists: Artist[] = [
     ],
   },
   {
-    slug: "skill-cole",
-    name: "Allan \"Skill\" Cole",
-    bornName: "Allan Aloysius Cole",
-    born: "October 14, 1950, Woodford Park, Kingston, Jamaica",
-    died: "September 9, 2025, Kingston, Jamaica (heart failure, after a period of illness)",
-    knownFor:
-      "Regarded as one of Jamaica's greatest-ever footballers and one of Bob Marley's closest friends and confidants, who managed the Wailers through the 1970s and holds a co-writing credit on Marley's \"War.\"",
-    bio: [
-      "Note on naming: some popular references render his first name as \"Alistair,\" but contemporaneous and obituary sources consistently give his birth name as Allan Aloysius Cole. He was born on October 14, 1950, and raised in the middle-income Woodford Park district of Kingston, Jamaica, the son of a civil servant father and a dressmaker mother. A gifted attacking midfielder/striker, he starred for Vere Technical High School in the daCosta Cup schoolboy competition and was called up to Jamaica's senior national football team at just fifteen years old — reportedly the youngest player ever capped for the national side — going on to appear in FIFA World Cup qualifying matches for Jamaica.",
-      "Cole's path into reggae history ran directly through his football fame. Nicknamed \"Skill\" for dribbling and vision that drew comparisons to Pelé, he became a genuine folk hero in Jamaica playing for Boys' Town and then Santos F.C. in the national league through the 1970s, and briefly abroad with the Atlanta Chiefs of the North American Soccer League (1968) and Brazil's Clube Náutico Capibaribe (1972), where he helped the club reach its first national championship appearance since 1959; a mercurial temperament is generally cited as the reason he never fully established himself overseas. He met Bob Marley in 1969 and the two forged a close bond, with Cole becoming something of a mentor and idol to the young singer. When Marley went solo in 1973, Cole stepped in as his road/tour manager, a role that placed him at the center of the Wailers' operations through reggae's defining decade.",
-      "Beyond touring logistics, Cole left a direct creative mark on Marley's catalogue: he holds a co-writing credit (for the underlying idea) on \"War,\" from the 1976 album \"Rastaman Vibration,\" whose lyrics are drawn almost verbatim from Emperor Haile Selassie I's 1963 address to the United Nations — Cole reportedly bought a pamphlet of the speech and urged Marley to set it to music. He is also frequently credited in retrospectives with input on other Wailers-era songs and reworkings, though the precise extent of his authorial role on these varies by account and is less firmly documented than his \"War\" credit. In the mid-1970s Cole also lived in Ethiopia for roughly three years coaching the Ethiopian national football team, merging his two lifelong passions of sport and music, before returning to serve as road manager for Marley's final tour in 1980 — including Marley's landmark performance of \"Zimbabwe\" at that country's independence celebrations in Harare in April 1980, just over a year before Marley's death from cancer in May 1981.",
-      "Cole spent his later decades as one of the last living insiders able to speak firsthand about Marley's private life and the Wailers' formative years, giving interviews (including a widely cited 2016 Jamaica Gleaner piece) in which he said there was \"more to Bob than the world knows.\" He was also part of a long-running, reportedly near-settled royalties dispute with Chris Blackwell/Island Records over songwriting credit dating back to the Marley era. Cole died on September 9, 2025, in Kingston at age 74 after a period of illness; his death prompted tributes from Jamaican political and cultural figures, including Opposition Leader Mark Golding, who called him possibly \"our greatest ever footballer\" and praised his lasting impact on the development of reggae culture alongside his sporting legacy. His story stands as a rare bridge between Jamaica's golden eras of football and reggae.",
-    ],
-    sources: [
-      { title: "Allan Cole (footballer) - Wikipedia", url: "https://en.wikipedia.org/wiki/Allan_Cole_(footballer)" },
-      { title: "Allan 'Skill' Cole is dead - Jamaica Observer", url: "https://www.jamaicaobserver.com/2025/09/09/allan-skill-cole-dead/" },
-      { title: "Allan 'Skill' Cole, Football Legend And Bob Marley's Former Manager, Dead At 74 - DancehallMag", url: "https://www.dancehallmag.com/2025/09/10/news/allan-skill-cole-football-legend-and-bob-marleys-former-manager-dead-at-74.html" },
-      { title: "Jamaican football legend Allan \"Skill\" Cole dies at 74 - Caribbean National Weekly", url: "https://www.caribbeannationalweekly.com/posts/jamaican-football-legend-allan-skill-cole-dies-at-74" },
-      { title: "'Skill' Cole Says There Is More To Bob Than The World Knows - Jamaica Gleaner", url: "https://jamaica-gleaner.com/article/entertainment/20160327/skill-cole-says-there-more-bob-world-knows" },
-      { title: "Near Settlement Reached Between Allan 'Skill' Cole and Chris Blackwell, Over Unpaid Royalties!", url: "https://clintonlindsay.com/2015/12/06/near-settlement-reached-between-allan-skill-cole-and-chris-blackwell-over-unpaid-royalties/" },
-    ],
-  },
-  {
       "slug": "yellowman",
       "name": "Yellowman",
       "bornName": "Winston Foster",
