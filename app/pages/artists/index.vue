@@ -35,8 +35,13 @@ const grouped = computed(() => {
     return matchesQuery && matchesEra;
   });
 
+  if (activeEra.value === "All") {
+    const items = [...filtered].sort((a, b) => a.name.localeCompare(b.name));
+    return items.length > 0 ? [{ era: "All Artists" as const, items }] : [];
+  }
+
   return ERA_ORDER.map((era) => ({
-    era,
+    era: era as string,
     items: filtered.filter((a) => effectiveEra(a) === era).sort((a, b) => a.name.localeCompare(b.name)),
   })).filter((g) => g.items.length > 0);
 });
