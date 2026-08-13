@@ -1,0 +1,32 @@
+# Netlify _redirects — generated from old dancehallmuseum.org WordPress site
+# Preserves search-engine indexing across the redesign. Drop into public/_redirects
+# once the new site domain is live. All entries are permanent (301) redirects.
+
+/2026/04/02/welcome-to-the-dancehall-museum-a-cultural-game-changer-from-yardrock-tv/  /journal/welcome-to-the-dancehall-museum-a-cultural-game-changer-from-yardrock-tv/  301!
+/2026/04/01/the-complete-history-of-dancehall-from-kingstons-dance-floors-to-a-global-cultural-force/  /journal/the-complete-history-of-dancehall-from-kingstons-dance-floors-to-a-global-cultural-force/  301!
+/2026/04/02/sound-system-culture-in-jamaica-the-foundation-of-dancehall/  /journal/sound-system-culture-in-jamaica-the-foundation-of-dancehall/  301!
+/2026/04/02/dancehall-fashion-the-evolution-of-jamaican-style/  /journal/dancehall-fashion-the-evolution-of-jamaican-style/  301!
+/2026/04/02/dancehall-queens-style-power-and-cultural-influence/  /journal/dancehall-queens-style-power-and-cultural-influence/  301!
+/2026/04/02/from-kingston-to-the-world-how-dancehall-influenced-global-fashion-music-and-culture/  /journal/from-kingston-to-the-world-how-dancehall-influenced-global-fashion-music-and-culture/  301!
+/2026/04/02/from-the-archive-the-visual-language-of-dancehall-flyers/  /journal/from-the-archive-the-visual-language-of-dancehall-flyers/  301!
+/2026/04/02/icons-of-dancehall-style-artists-who-defined-the-image-of-the-culture/  /journal/icons-of-dancehall-style-artists-who-defined-the-image-of-the-culture/  301!
+/2026/04/02/the-evolution-of-dancehall-fashion-a-journey-through-six-eras/  /journal/the-evolution-of-dancehall-fashion-a-journey-through-six-eras/  301!
+/2026/04/02/dancehall-dancers-fashion-icons-bogle-latonya-style-and-the-legacy-of-style-in-motion/  /journal/dancehall-dancers-fashion-icons-bogle-latonya-style-and-the-legacy-of-style-in-motion/  301!
+/2026/04/02/dancehall-origins-from-kingston-jamaica-to-the-world/  /journal/dancehall-origins-from-kingston-jamaica-to-the-world/  301!
+/2026/04/02/how-jamaican-culture-shaped-new-york-the-entertainment-industry-and-the-world/  /journal/how-jamaican-culture-shaped-new-york-the-entertainment-industry-and-the-world/  301!
+/2026/04/02/the-history-of-dancehall-queens-the-legacy-of-carlene-smith/  /journal/the-history-of-dancehall-queens-the-legacy-of-carlene-smith/  301!
+/2026/04/02/the-language-of-dancehall-patois-style-and-identity/  /journal/the-language-of-dancehall-patois-style-and-identity/  301!
+/2026/04/02/shabba-ranks-and-the-global-dancehall-image/  /journal/shabba-ranks-and-the-global-dancehall-image/  301!
+/2026/04/03/super-cat-cool-authority-style-and-the-architecture-of-dancehall-swagger/  /journal/super-cat-cool-authority-style-and-the-architecture-of-dancehall-swagger/  301!
+/2026/04/02/yellowman-the-legendary-voice-who-helped-define-dancehall/  /journal/yellowman-the-legendary-voice-who-helped-define-dancehall/  301!
+/home/  /  301!
+/about-2/  /about/  301!
+/archive/  /collections/  301!
+/category/journal/  /journal/category/journal/  301!
+/category/about/  /journal/category/about/  301!
+/category/artist/  /journal/category/artist/  301!
+/tag/bogle/  /journal/  301!
+/tag/latonya-style/  /journal/  301!
+/tag/carlene-smith/  /journal/  301!
+/tag/dancehall-queen-carlene/  /journal/  301!
+/tag/shabba-ranks/  /journal/  301!

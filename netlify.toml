@@ -1,0 +1,7 @@
+# Netlify configuration for the Nuxt 4 static site.
+[build]
+  command = "npm run generate"
+  publish = ".output/public"
+
+[build.environment]
+  NODE_VERSION = "22"
