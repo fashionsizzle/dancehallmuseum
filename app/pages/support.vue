@@ -20,6 +20,10 @@ useSeoMeta({
       dek="Support for Dancehall Museum sustains its mission and strengthens the preservation of one of Jamaica's most influential cultural movements."
     />
 
+    <section class="mx-auto max-w-[1400px] px-6 pb-20 sm:px-10">
+      <Reveal><DonationBox /></Reveal>
+    </section>
+
     <section class="mx-auto max-w-3xl px-6 pb-28 sm:px-10">
       <Reveal><ContentBlocks :blocks="blocks" /></Reveal>
     </section>
