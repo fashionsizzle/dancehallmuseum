@@ -9,6 +9,7 @@ const BOTTOM_LINKS = [
   { label: "Privacy", href: "/privacy" },
   { label: "Terms", href: "/terms" },
   { label: "Accessibility", href: "/accessibility" },
+  { label: "Sitemap", href: "/sitemap" },
 ] as const;
 
 // NOTE: placeholder hrefs — swap in the museum's real social profile URLs.
