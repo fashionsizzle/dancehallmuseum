@@ -244,6 +244,15 @@ onUnmounted(() => {
     </div>
 
     <Transition name="vd-card">
+      <div v-if="!isOpen" class="pointer-events-none absolute inset-x-0 bottom-40 flex justify-center px-6 sm:bottom-44">
+        <div class="rounded-full border border-paper/15 bg-noir/70 px-6 py-2.5 text-center backdrop-blur-sm">
+          <p class="label text-brass-bright">{{ activeFrame.era }}</p>
+          <p class="mt-0.5 font-display text-lg leading-tight text-paper sm:text-xl">{{ activeFrame.title }}</p>
+        </div>
+      </div>
+    </Transition>
+
+    <Transition name="vd-card">
       <div v-if="isOpen" class="absolute inset-x-0 bottom-0 flex justify-center px-6 pb-24 sm:pb-16">
         <div class="pointer-events-none max-w-md text-center text-paper">
           <p class="label text-brass-bright">{{ activeFrame.era }}</p>

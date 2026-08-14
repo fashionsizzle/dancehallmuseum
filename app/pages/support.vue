@@ -27,5 +27,9 @@ useSeoMeta({
     <section class="mx-auto max-w-3xl px-6 pb-28 sm:px-10">
       <Reveal><ContentBlocks :blocks="blocks" /></Reveal>
     </section>
+
+    <section class="mx-auto max-w-[1400px] px-6 pb-28 sm:px-10">
+      <Reveal><ContributionForm /></Reveal>
+    </section>
   </div>
 </template>

@@ -43,6 +43,7 @@ const journalSorted = [...journalPosts].sort((a, b) => a.title.localeCompare(b.t
             <li><NuxtLink to="/artists" class="text-lg text-ink hover:text-brass">Artist Archive</NuxtLink></li>
             <li><NuxtLink to="/learn" class="text-lg text-ink hover:text-brass">Learn</NuxtLink></li>
             <li><NuxtLink to="/journal" class="text-lg text-ink hover:text-brass">Journal</NuxtLink></li>
+            <li><NuxtLink to="/events" class="text-lg text-ink hover:text-brass">Events</NuxtLink></li>
             <li><NuxtLink to="/support" class="text-lg text-ink hover:text-brass">Support / Donate</NuxtLink></li>
           </ul>
         </Reveal>

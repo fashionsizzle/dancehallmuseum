@@ -17,6 +17,8 @@ const STATIC_ROUTES = [
   "/learn/glossary",
   "/learn/from-slavery-to-dancehall",
   "/support",
+  "/events",
+  "/sitemap",
   "/privacy",
   "/terms",
   "/cookies",
@@ -32,7 +34,7 @@ export default defineEventHandler((event) => {
     ...learnTopics.map((t) => ({ path: `/learn/${t.slug}`, priority: "0.6" })),
   ];
 
-  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
+  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
     .map(
       (u) =>
         `  <url>\n    <loc>${SITE_URL}${u.path}</loc>\n${

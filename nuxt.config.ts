@@ -26,6 +26,7 @@ export default defineNuxtConfig({
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=2" },
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico?v=2" },
+        { rel: "alternate", type: "application/rss+xml", title: "Dancehall Museum Journal", href: "/rss.xml" },
       ],
     },
   },
@@ -33,7 +34,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ["/", "/sitemap.xml"],
+      routes: ["/", "/sitemap.xml", "/rss.xml"],
     },
   },
 });

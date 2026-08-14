@@ -26,6 +26,7 @@ const [lead, ...rest] = journalPosts;
           dancehall history, sound-system culture, fashion, language, and the
           artists who shaped the movement.
         </p>
+        <a href="/rss.xml" class="editorial-link mt-8 inline-flex text-ink-faint hover:text-ink">Subscribe via RSS</a>
       </Reveal>
     </section>
 

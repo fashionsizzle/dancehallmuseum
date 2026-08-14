@@ -12,10 +12,47 @@ const sorted = [...artists].sort((a, b) => a.name.localeCompare(b.name));
 const idx = sorted.findIndex((a) => a.slug === artist.slug);
 const next = sorted[(idx + 1) % sorted.length];
 
+const pageUrl = `https://dancehallmuseum.org/artists/${artist.slug}`;
+
+const moreFromEra = artists
+  .filter((a) => a.slug !== artist.slug && a.slug !== next.slug && (a.era ?? "Roots & Culture-Bearers") === (artist.era ?? "Roots & Culture-Bearers"))
+  .sort((a, b) => a.name.localeCompare(b.name))
+  .slice(0, 3);
+
 useSeoMeta({
   title: `${artist.name} — Dancehall Museum Artist Archive`,
   description: artist.knownFor,
+  ogImage: artist.image ?? undefined,
 });
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: artist.name,
+        alternateName: artist.bornName ?? undefined,
+        description: artist.knownFor,
+        image: artist.image ? `https://dancehallmuseum.org${artist.image}` : undefined,
+        birthDate: artist.born ?? undefined,
+        deathDate: artist.died ?? undefined,
+        url: pageUrl,
+        mainEntityOfPage: pageUrl,
+      }),
+    },
+  ],
+});
+
+const cited = ref(false);
+function copyCitation() {
+  const citation = `Dancehall Museum. "${artist!.name}." Dancehall Museum Artist Archive. Accessed ${new Date().toISOString().slice(0, 10)}. ${pageUrl}.`;
+  navigator.clipboard.writeText(citation).then(() => {
+    cited.value = true;
+    setTimeout(() => (cited.value = false), 2000);
+  });
+}
 </script>
 
 <template>
@@ -23,8 +60,11 @@ useSeoMeta({
     <div class="apc-stars" aria-hidden="true" />
 
     <section class="mx-auto max-w-6xl px-6 pb-8 pt-36 sm:px-10 sm:pt-44">
-      <Reveal>
+      <Reveal class="flex items-center justify-between gap-6">
         <NuxtLink to="/artists" class="editorial-link text-paper/50 hover:text-paper">&larr; Artist Archive</NuxtLink>
+        <button type="button" class="label text-paper/40 transition-colors hover:text-paper/80" @click="copyCitation">
+          {{ cited ? "Citation copied" : "Cite this page" }}
+        </button>
       </Reveal>
     </section>
 
@@ -91,6 +131,24 @@ useSeoMeta({
       <div class="apc-prose">
         <Reveal v-for="(para, i) in artist.bio" :key="i" :delay="0.03 * (i % 6)" as="p">{{ para }}</Reveal>
       </div>
+    </section>
+
+    <section v-if="moreFromEra.length" class="mx-auto max-w-6xl px-6 pb-4 sm:px-10">
+      <div class="apc-rule" />
+      <Reveal :delay="0.05">
+        <p class="label mb-6 mt-16 text-paper/50">More from {{ artist.era ?? "Roots & Culture-Bearers" }}</p>
+        <div class="grid gap-x-8 gap-y-4 sm:grid-cols-3">
+          <NuxtLink
+            v-for="other in moreFromEra"
+            :key="other.slug"
+            :to="`/artists/${other.slug}`"
+            class="group block border-b border-white/10 pb-4"
+          >
+            <h3 class="apc-next-name text-xl sm:text-2xl">{{ other.name }}</h3>
+            <p class="mt-1 line-clamp-1 text-xs text-paper/50">{{ other.knownFor }}</p>
+          </NuxtLink>
+        </div>
+      </Reveal>
     </section>
 
     <section class="mx-auto max-w-6xl px-6 pb-28 sm:px-10">

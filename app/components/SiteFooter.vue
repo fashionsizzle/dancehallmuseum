@@ -5,6 +5,7 @@ const BOTTOM_LINKS = [
   { label: "About Us", href: "/about" },
   { label: "Artist Archive", href: "/artists" },
   { label: "Journal", href: "/journal" },
+  { label: "Events", href: "/events" },
   { label: "Donate", href: "/support" },
   { label: "Privacy", href: "/privacy" },
   { label: "Terms", href: "/terms" },

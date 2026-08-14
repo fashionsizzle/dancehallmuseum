@@ -10,11 +10,54 @@ if (!post) {
 
 const idx = journalPosts.findIndex((p) => p.slug === post.slug);
 const next = journalPosts[(idx + 1) % journalPosts.length];
+const pageUrl = `https://dancehallmuseum.org/journal/${post.slug}`;
+
+function keywords(title: string) {
+  const stop = new Set(["the", "a", "an", "of", "and", "to", "in", "for", "on", "from", "how", "why", "is", "are", "at", "as", "&", "with"]);
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length > 3 && !stop.has(w));
+}
+
+const postKeywords = keywords(post.title);
+const related = journalPosts
+  .filter((p) => p.slug !== post.slug)
+  .map((p) => ({ post: p, score: keywords(p.title).filter((w) => postKeywords.includes(w)).length }))
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 3)
+  .map((r) => r.post);
 
 useSeoMeta({
   title: `${post.title} — Dancehall Museum Journal`,
   description: post.dek || post.title,
   ogImage: post.images[0],
+});
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: post.title,
+        description: post.dek || post.title,
+        image: post.images[0] ? `https://dancehallmuseum.org${post.images[0]}` : undefined,
+        datePublished: post.date,
+        dateModified: post.date,
+        author: { "@type": "Organization", name: "The Reggae Institute" },
+        publisher: {
+          "@type": "Organization",
+          name: "Dancehall Museum",
+          logo: { "@type": "ImageObject", url: "https://dancehallmuseum.org/favicon.svg" },
+        },
+        mainEntityOfPage: pageUrl,
+        url: pageUrl,
+      }),
+    },
+  ],
 });
 </script>
 
@@ -59,6 +102,17 @@ useSeoMeta({
           sizes="50vw sm:33vw"
           class="aspect-square w-full object-cover"
         />
+      </div>
+    </section>
+
+    <div v-if="related.length" class="rule mx-auto max-w-[1400px]" />
+
+    <section v-if="related.length" class="mx-auto max-w-[1400px] px-6 py-20 sm:px-10">
+      <p class="label mb-8">Related articles</p>
+      <div class="grid gap-10 sm:grid-cols-3">
+        <NuxtLink v-for="r in related" :key="r.slug" :to="`/journal/${r.slug}`" class="block">
+          <OverlayCard :image="r.images[0]" :label="r.date" :title="r.title" />
+        </NuxtLink>
       </div>
     </section>
 
